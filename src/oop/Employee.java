@@ -1,39 +1,21 @@
 package oop;
 
+import lombok.AccessLevel;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.time.LocalDate;
-import java.util.Objects;
 
-@ToString(exclude = {"id", "empCode"}, callSuper = true)
+@Data(staticConstructor = "of")
 @EqualsAndHashCode(callSuper = true)
 public class Employee extends Person {
 
-    @Getter
-    @Setter
-    private Long id;
-
-    @Getter()
-    @Setter()
-    private String empCode;
-
-    @Getter
-    @Setter
+    private final Long id;
+    private final String empCode;
     private String firstName;
-
-    @Getter
-    @Setter
     private String lastName;
-
-    @Getter
-    @Setter
     private LocalDate birthDate;
-
-    @Getter
-    @Setter
     private String gender;
 
 }
