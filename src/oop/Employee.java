@@ -1,18 +1,16 @@
 package oop;
 
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Data(staticConstructor = "of")
+@Data
 @EqualsAndHashCode(callSuper = true)
+@RequiredArgsConstructor(staticName = "of")
 public class Employee extends Person {
 
     private final Long id;
-    private final String empCode;
+    @NonNull private String empCode;
     private String firstName;
     private String lastName;
     private LocalDate birthDate;
