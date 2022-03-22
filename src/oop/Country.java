@@ -1,9 +1,13 @@
 package oop;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Tolerate;
+import lombok.extern.jackson.Jacksonized;
 
 @Data
+@Builder
+@Jacksonized
 public class Country {
 
     private String name;
