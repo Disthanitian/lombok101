@@ -3,6 +3,7 @@ package services;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import oop.Country;
+import oop.Postal;
 
 import java.io.IOException;
 
@@ -18,10 +19,15 @@ public class CountryService {
 
         ObjectMapper objectMapper = new ObjectMapper();
         String result = objectMapper.writeValueAsString(country);
-        System.out.println(result);
+//        System.out.println(result);
 
         Country deCountry = objectMapper.readValue(result, Country.class);
-        System.out.println(deCountry);
+//        System.out.println(deCountry);
+
+        String addressFieldName = Postal.Fields.address;
+        String postalFieldName =  Postal.Fields.name;
+        System.out.println(addressFieldName);
+        System.out.println(postalFieldName);
 
     }
 
