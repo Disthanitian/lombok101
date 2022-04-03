@@ -11,14 +11,14 @@ public class ExtensionService {
 
         int[] intArray = {5, 3, 8, 2};
 //        Arrays.sort(intArray);
-        intArray.sort();
+        //intArray.sort();
 
         for(int x=0;x<intArray.length;x++){
             System.out.print(intArray[x]);
         }
 
         System.out.println();
-        System.out.println("Hello".toTileCase());
+        //System.out.println("Hello".toTileCase());
 
     }
 
